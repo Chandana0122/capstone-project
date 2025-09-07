@@ -3,33 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.opencart.tests.CheckoutTest">
-        <methods>
-          <include name="setupReport"/>
-          <include name="tearDown"/>
-          <include name="testCheckoutProcess"/>
-          <include name="setup"/>
-          <include name="flushReport"/>
-        </methods>
-      </class> <!-- com.opencart.tests.CheckoutTest -->
-      <class name="com.opencart.tests.LogoutTest">
-        <methods>
-          <include name="testLogout"/>
-          <include name="setupReport"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="flushReport"/>
-        </methods>
-      </class> <!-- com.opencart.tests.LogoutTest -->
-      <class name="com.opencart.tests.RegisterTest">
-        <methods>
-          <include name="testRegisterUser"/>
-          <include name="setupReport"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="flushReport"/>
-        </methods>
-      </class> <!-- com.opencart.tests.RegisterTest -->
       <class name="com.opencart.tests.LoginTest">
         <methods>
           <include name="setupReport"/>
@@ -39,15 +12,6 @@
           <include name="testValidLogin"/>
         </methods>
       </class> <!-- com.opencart.tests.LoginTest -->
-      <class name="com.opencart.tests.AddToCartTest">
-        <methods>
-          <include name="testAddProductToCart"/>
-          <include name="setupReport"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="flushReport"/>
-        </methods>
-      </class> <!-- com.opencart.tests.AddToCartTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

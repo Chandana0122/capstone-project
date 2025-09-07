@@ -3,28 +3,34 @@ package com.opencart.tests;
 import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.opencart.base.Base;
 import com.opencart.pages.RegisterPage;
 import com.opencart.utilities.ExcelUtil;
 
 public class RegisterTest extends Base {
 
-    @Test
+    // Store the generated email globally so LoginTest can use it
+    public static String registeredEmail;
+
+    @Test(priority = 1)
     public void testRegisterUser() {
-        // Fetch data from Excel (assume row 1 has values)
+        // Read row 1 from Excel (0-based index)
         Map<String, String> data = ExcelUtil.getRegisterData(1);
 
         RegisterPage registerPage = new RegisterPage(driver);
-        boolean result = registerPage.registerUser(data);
 
-        // Report + Assert
-        if (result) {
-            test.pass("🎉 Registration successful for email: " + data.get("mail"));
+        // Register user and get the actual email used
+        registeredEmail = registerPage.registerUser(data);
+
+        if (registeredEmail != null && !registeredEmail.isEmpty()) {
+            test.pass("🎉 Registration successful for email: " + registeredEmail);
+            System.out.println("🎉 Registration successful for email: " + registeredEmail);
         } else {
-            test.fail("❌ Registration failed for email: " + data.get("mail"));
+            test.fail("❌ Registration failed for email: " + data.get("email"));
+            System.out.println("❌ Registration failed for email: " + data.get("email"));
         }
 
-        Assert.assertTrue(result, "User registration failed!");
+        Assert.assertTrue(registeredEmail != null && !registeredEmail.isEmpty(),
+                "❌ User registration failed!");
     }
 }
