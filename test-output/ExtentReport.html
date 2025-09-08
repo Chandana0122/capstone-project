@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">OpenCart Test Execution Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 7, 2025 11:47:04 PM</span></a>
+<a href="#"><span class="badge badge-primary">Sep 8, 2025 02:02:42 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -67,6 +72,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,9 +85,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">testCheckoutProcess</p>
+            <p class="name">testAddProductToCart</p>
             <p class="text-sm">
-              <span>11:47:05 PM</span> / <span>00:00:03:595</span>
+              <span>2:02:43 PM</span> / <span>00:00:04:695</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +95,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testCheckoutProcess</h5>
-<span class='badge badge-success'>09.07.2025 11:47:05 PM</span>
-<span class='badge badge-danger'>09.07.2025 11:47:08 PM</span>
-<span class='badge badge-default'>00:00:03:595</span>
+<h5 class="test-status text-pass">testAddProductToCart</h5>
+<span class='badge badge-success'>09.08.2025 2:02:43 PM</span>
+<span class='badge badge-danger'>09.08.2025 2:02:47 PM</span>
+<span class='badge badge-default'>00:00:04:695</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -105,16 +111,9 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:47:08 PM</td>
+        <td>2:02:47 PM</td>
         <td>
-          ✅ Checkout successful!
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:47:08 PM</td>
-        <td>
-          ✅ Test Passed: testCheckoutProcess
+          ✅ Test Passed: testAddProductToCart
         </td>
       </tr>
   </tbody>
@@ -127,9 +126,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">testAddProductToCart</p>
+            <p class="name">testCheckoutProcess</p>
             <p class="text-sm">
-              <span>11:47:09 PM</span> / <span>00:00:02:909</span>
+              <span>2:02:48 PM</span> / <span>00:00:02:332</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -137,10 +136,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testAddProductToCart</h5>
-<span class='badge badge-success'>09.07.2025 11:47:09 PM</span>
-<span class='badge badge-danger'>09.07.2025 11:47:12 PM</span>
-<span class='badge badge-default'>00:00:02:909</span>
+<h5 class="test-status text-pass">testCheckoutProcess</h5>
+<span class='badge badge-success'>09.08.2025 2:02:48 PM</span>
+<span class='badge badge-danger'>09.08.2025 2:02:50 PM</span>
+<span class='badge badge-default'>00:00:02:332</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -153,9 +152,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:47:12 PM</td>
+        <td>2:02:50 PM</td>
         <td>
-          ✅ Test Passed: testAddProductToCart
+          ✅ Checkout successful!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:02:50 PM</td>
+        <td>
+          ✅ Test Passed: testCheckoutProcess
         </td>
       </tr>
   </tbody>
@@ -163,25 +169,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="3"
+        <li class="test-item"  status="fail" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">testRegisterUser</p>
+            <p class="name">testValidLogin</p>
             <p class="text-sm">
-              <span>11:47:12 PM</span> / <span>00:00:04:848</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:02:51 PM</span> / <span>00:00:02:608</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testRegisterUser</h5>
-<span class='badge badge-success'>09.07.2025 11:47:12 PM</span>
-<span class='badge badge-danger'>09.07.2025 11:47:17 PM</span>
-<span class='badge badge-default'>00:00:04:848</span>
+<h5 class="test-status text-fail">testValidLogin</h5>
+<span class='badge badge-success'>09.08.2025 2:02:51 PM</span>
+<span class='badge badge-danger'>09.08.2025 2:02:53 PM</span>
+<span class='badge badge-default'>00:00:02:608</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -193,17 +199,68 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:47:17 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:02:53 PM</td>
         <td>
-          🎉 Registration successful for email: jogfgf1757269036515@test.com
+          ❌ Login failed for email: null
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:47:17 PM</td>
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>2:02:53 PM</td>
         <td>
-          ✅ Test Passed: testRegisterUser
+          ⚠️ Could not attach screenshot: screenshots\testValidLogin.png
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:02:53 PM</td>
+        <td>
+          ❌ Test Failed: testValidLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:02:53 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: ❌ Login failed with valid credentials. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.opencart.tests.LoginTest.testValidLogin(LoginTest.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -218,7 +275,7 @@
           <div class="test-detail">
             <p class="name">testLogout</p>
             <p class="text-sm">
-              <span>11:47:18 PM</span> / <span>00:00:03:332</span>
+              <span>2:02:54 PM</span> / <span>00:00:06:939</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -227,9 +284,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">testLogout</h5>
-<span class='badge badge-success'>09.07.2025 11:47:18 PM</span>
-<span class='badge badge-danger'>09.07.2025 11:47:21 PM</span>
-<span class='badge badge-default'>00:00:03:332</span>
+<span class='badge badge-success'>09.08.2025 2:02:54 PM</span>
+<span class='badge badge-danger'>09.08.2025 2:03:01 PM</span>
+<span class='badge badge-default'>00:00:06:939</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -242,14 +299,14 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:47:21 PM</td>
+        <td>2:03:01 PM</td>
         <td>
           ✅ Logout successful!
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:47:21 PM</td>
+        <td>2:03:01 PM</td>
         <td>
           ✅ Test Passed: testLogout
         </td>
@@ -259,14 +316,110 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="5"
+        <li class="test-item"  status="fail" test-id="5"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">testValidLogin</p>
+            <p class="name">testRegisterAndLogin</p>
             <p class="text-sm">
-              <span>11:47:22 PM</span> / <span>00:00:02:917</span>
+              <span>2:03:02 PM</span> / <span>00:00:24:765</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">testRegisterAndLogin</h5>
+<span class='badge badge-success'>09.08.2025 2:03:02 PM</span>
+<span class='badge badge-danger'>09.08.2025 2:03:26 PM</span>
+<span class='badge badge-default'>00:00:24:765</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/testRegisterAndLogin.png' src="screenshots/testRegisterAndLogin.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:03:26 PM</td>
+        <td>
+          ❌ Login failed for johndoe1757320384852@test.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:03:26 PM</td>
+        <td>
+          ❌ Test Failed: testRegisterAndLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:03:26 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: ❌ Login failed for newly registered user. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.opencart.tests.RegisterAndLoginTest.testRegisterAndLogin(RegisterAndLoginTest.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testRegisterUser</p>
+            <p class="text-sm">
+              <span>2:03:27 PM</span> / <span>00:00:03:365</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -274,11 +427,11 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testValidLogin</h5>
-<span class='badge badge-success'>09.07.2025 11:47:22 PM</span>
-<span class='badge badge-danger'>09.07.2025 11:47:25 PM</span>
-<span class='badge badge-default'>00:00:02:917</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<h5 class="test-status text-pass">testRegisterUser</h5>
+<span class='badge badge-success'>09.08.2025 2:03:27 PM</span>
+<span class='badge badge-danger'>09.08.2025 2:03:30 PM</span>
+<span class='badge badge-default'>00:00:03:365</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -290,16 +443,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:47:25 PM</td>
+        <td>2:03:30 PM</td>
         <td>
-          ✅ Login successful for email: jogfgf1757269036515@test.com
+          🎉 Registration successful for email: jogfgf1757320409656@test.com
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:47:25 PM</td>
+        <td>2:03:30 PM</td>
         <td>
-          ✅ Test Passed: testValidLogin
+          ✅ Test Passed: testRegisterUser
         </td>
       </tr>
   </tbody>
@@ -316,30 +469,86 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:02:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>testValidLogin</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:03:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>testRegisterAndLogin</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 7, 2025 11:47:04 PM</h3>
+<h3>Sep 8, 2025 02:02:42 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 7, 2025 11:47:25 PM</h3>
+<h3>Sep 8, 2025 02:03:31 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>5</h3>
+<h3>4</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>2</h3>
 </div></div>
 </div>
 </div>
@@ -355,12 +564,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>5</b> tests passed
+<div><small data-tooltip='66%'>
+<b>4</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='33%'><b>2</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -378,10 +587,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>9</b> events passed</small></div>
+<div><small data-tooltip='50%'><b>7</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='42%'><b>6</b> events failed,
+<b data-tooltip='%'>1</b> others
 </small>
 </div>
 </div>
@@ -397,7 +606,7 @@
 </div></div>
 <script>
 var timeline = {
-"testCheckoutProcess":3.595,"testAddProductToCart":2.909,"testRegisterUser":4.848,"testLogout":3.332,"testValidLogin":2.917
+"testAddProductToCart":4.695,"testCheckoutProcess":2.332,"testValidLogin":2.608,"testLogout":6.939,"testRegisterAndLogin":24.765,"testRegisterUser":3.365
 };
 </script>
 <div class="row">
@@ -428,8 +637,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 5,
-failParent: 0,
+passParent: 4,
+failParent: 2,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -445,9 +654,9 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 9,
-failEvents: 0,
-warningEvents: 0,
+passEvents: 7,
+failEvents: 6,
+warningEvents: 1,
 skipEvents: 0,
 infoEvents: 0
 };
